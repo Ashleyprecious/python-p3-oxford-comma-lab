@@ -1,8 +1,10 @@
-def oxford_comma(items):
-    if len(items) == 1:
-        return items[0]
-    elif len(items) == 2:
-        return f"{items[0]} and {items[1]}"
+def oxford_comma(elements):
+    if len(elements) == 0:
+        return ""
+    elif len(elements) == 1:
+        return elements[0]
+    elif len(elements) == 2:
+        return f"{elements[0]} and {elements[1]}"
     else:
-        comma_separated = ", ".join(items[:-1])
-        return f"{comma_separated}, and {items[-1]}"
+        comma_separated = ", ".join(elements[:-1])
+        return f"{comma_separated}, and {elements[-1]}"
